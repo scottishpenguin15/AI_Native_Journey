@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Features Demo</title>
+    <link rel="stylesheet" href="complete.css">
+</head>
+<body>
+    <div class="layout">
+        <header class="card">
+            <h1>CSS Features Showcase</h1>
+            <nav class="flex">
+                <a href="#grid" class="btn">Grid</a>
+                <a href="#flexbox" class="btn">Flexbox</a>
+                <a href="#animations" class="btn">Animations</a>
+                <a href="#modern" class="btn">Modern Features</a>
+            </nav>
+        </header>
+
+        <main>
+            <!-- Grid Section -->
+            <section id="grid" class="card animate-fade-in">
+                <h2>CSS Grid</h2>
+                <div class="grid">
+                    <div class="card">Grid Item 1</div>
+                    <div class="card">Grid Item 2</div>
+                    <div class="card">Grid Item 3</div>
+                    <div class="card">Grid Item 4</div>
+                </div>
+            </section>
+
+            <!-- Flexbox Section -->
+            <section id="flexbox" class="card animate-slide-in">
+                <h2>Flexbox</h2>
+                <div class="flex">
+                    <div class="card">Flex Item 1</div>
+                    <div class="card">Flex Item 2</div>
+                    <div class="card">Flex Item 3</div>
+                </div>
+            </section>
+
+            <!-- Animations Section -->
+            <section id="animations" class="card">
+                <h2>Animations & Transitions</h2>
+                <div class="flex">
+                    <button class="btn animate-pulse">Pulse Animation</button>
+                    <button class="btn transition-all">Hover Me</button>
+                    <div class="card transform-rotate">Rotated Card</div>
+                </div>
+            </section>
+
+            <!-- Modern Features Section -->
+            <section id="modern" class="card">
+                <h2>Modern CSS Features</h2>
+                
+                <!-- Filters -->
+                <div class="flex">
+                    <img src="https://via.placeholder.com/150" alt="Original" class="card">
+                    <img src="https://via.placeholder.com/150" alt="Blurred" class="card filter-blur">
+                    <img src="https://via.placeholder.com/150" alt="Bright" class="card filter-brightness">
+                </div>
+
+                <!-- Scroll Snap -->
+                <div class="scroll-container">
+                    <div class="scroll-item card">Scroll Item 1</div>
+                    <div class="scroll-item card">Scroll Item 2</div>
+                    <div class="scroll-item card">Scroll Item 3</div>
+                </div>
+
+                <!-- Forms -->
+                <form class="card">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" class="form-control" required>
+                    </div>
+                    <button type="submit" class="btn">Submit</button>
+                </form>
+            </section>
+        </main>
+
+        <footer class="card">
+            <p class="text-center">CSS Features Demo - Try resizing your browser to see responsive design!</p>
+        </footer>
+    </div>
+</body>
+</html> 

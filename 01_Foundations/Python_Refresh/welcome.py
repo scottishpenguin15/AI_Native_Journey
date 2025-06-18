@@ -12,25 +12,31 @@ def get_learning_paths():
 
 def get_welcome_message(name, learning_path):
     current_time = datetime.now().strftime("%H:%M:%S")
-    return f"""
-╔════════════════════════════════════════════════════════════╗
-║                                                            ║
-║  Welcome to your AI Native Journey, {name}!                ║
-║                                                            ║
-║  Current time: {current_time}                              ║
-║                                                            ║
-║  Selected Path: {learning_path}                            ║
-║                                                            ║
-║  Let's begin our exploration of AI and machine learning!   ║
-║                                                            ║
-╚════════════════════════════════════════════════════════════╝
-"""
+    # Special greeting for the AI Director
+    if name.lower() == "scott":
+        greeting = f"Hey, it's the awesome AI Director, {name}!"
+    else:
+        greeting = f"Welcome to your AI Native Journey, {name}!"
+    box_width = 60
+    lines = [
+        greeting,
+        f"Current time: {current_time}",
+        f"Selected Path: {learning_path}",
+        "Let's begin our exploration of AI and machine learning!"
+    ]
+    box = "\n" + "╔" + "═" * (box_width - 2) + "╗\n"
+    for line in lines:
+        box += f"║ {line.ljust(box_width - 4)} ║\n"
+    box += "╚" + "═" * (box_width - 2) + "╝\n"
+    return box
 
 def main():
-    # Get user's name
-    name = input("Please enter your name: ").strip()
-    if not name:
-        name = "Explorer"
+    # Get user's name with validation
+    while True:
+        name = input("Please enter your name: ").strip()
+        if name:
+            break
+        print("Name cannot be empty. Please try again.")
     
     # Show available learning paths
     print("\nAvailable Learning Paths:")
@@ -38,7 +44,7 @@ def main():
     for key, value in paths.items():
         print(f"{key}. {value}")
     
-    # Get user's path choice
+    # Get user's path choice with validation
     while True:
         choice = input("\nSelect your learning path (1-4): ").strip()
         if choice in paths:

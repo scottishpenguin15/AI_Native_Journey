@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Complete HTML5 Features Demonstration">
+    <meta name="keywords" content="HTML5, Web Development, Features">
+    <meta name="author" content="AI Native Journey">
+    <meta name="theme-color" content="#2c3e50">
+    <meta http-equiv="refresh" content="3600">
+    <meta name="robots" content="index, follow">
+    
+    <title>Complete HTML5 Features</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAbwAAAG8B8aLcQwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAB8SURBVDiNY2AYBYMRMDIyMjAyMjL8//+f4f///wz//v1j+P//P8P///8Z/v//z/Dv3z+Gf//+Mfz9+5fh79+/DH/+/GH4/fs3w69fvxh+/vzJ8OPHD4bv378zfPv2jeHr168MX758Yfj8+TPDp0+fGD5+/Mjw4cMHhvfv3zO8e/eO4e3btwwAANnwL0F5xqUAAAAASUVORK5CYII=">
+    
+    <!-- Styles -->
+    <style>
+        /* CSS will be added here */
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+        }
+        
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Add more styles as needed */
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#semantic">Semantic Elements</a></li>
+                <li><a href="#forms">Forms</a></li>
+                <li><a href="#media">Media</a></li>
+                <li><a href="#tables">Tables</a></li>
+                <li><a href="#canvas">Canvas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <!-- Semantic Elements Section -->
+        <section id="semantic">
+            <h1>Semantic Elements</h1>
+            
+            <article>
+                <h2>Article Example</h2>
+                <p>This is an article about HTML5 features.</p>
+                <aside>
+                    <p>Related information about HTML5.</p>
+                </aside>
+            </article>
+
+            <figure>
+                <img src="https://via.placeholder.com/400x300" alt="Placeholder image">
+                <figcaption>Figure caption example</figcaption>
+            </figure>
+
+            <details>
+                <summary>Click to expand</summary>
+                <p>Hidden content that can be revealed.</p>
+            </details>
+        </section>
+
+        <!-- Forms Section -->
+        <section id="forms">
+            <h2>Form Elements</h2>
+            <form action="/submit" method="post" enctype="multipart/form-data">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="tel">Phone:</label>
+                    <input type="tel" id="tel" name="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                    
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="date">
+                    
+                    <label for="time">Time:</label>
+                    <input type="time" id="time" name="time">
+                    
+                    <label for="color">Color:</label>
+                    <input type="color" id="color" name="color">
+                    
+                    <label for="range">Range:</label>
+                    <input type="range" id="range" name="range" min="0" max="100">
+                    
+                    <label for="file">File Upload:</label>
+                    <input type="file" id="file" name="file">
+                    
+                    <label for="select">Select Option:</label>
+                    <select id="select" name="select">
+                        <optgroup label="Group 1">
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                        </optgroup>
+                        <optgroup label="Group 2">
+                            <option value="3">Option 3</option>
+                            <option value="4">Option 4</option>
+                        </optgroup>
+                    </select>
+                    
+                    <label for="textarea">Text Area:</label>
+                    <textarea id="textarea" name="textarea" rows="4" cols="50"></textarea>
+                    
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                </fieldset>
+            </form>
+        </section>
+
+        <!-- Media Section -->
+        <section id="media">
+            <h2>Media Elements</h2>
+            
+            <h3>Audio</h3>
+            <audio controls>
+                <source src="audio.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            
+            <h3>Video</h3>
+            <video controls width="400">
+                <source src="video.mp4" type="video/mp4">
+                Your browser does not support the video element.
+            </video>
+            
+            <h3>Picture Element</h3>
+            <picture>
+                <source media="(min-width: 800px)" srcset="large.jpg">
+                <source media="(min-width: 400px)" srcset="medium.jpg">
+                <img src="small.jpg" alt="Responsive image">
+            </picture>
+        </section>
+
+        <!-- Tables Section -->
+        <section id="tables">
+            <h2>Table Elements</h2>
+            <table>
+                <caption>Sample Table</caption>
+                <colgroup>
+                    <col span="2" style="background-color: #f1f1f1">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>Header 1</th>
+                        <th>Header 2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Data 1</td>
+                        <td>Data 2</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>Footer 1</td>
+                        <td>Footer 2</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <!-- Canvas Section -->
+        <section id="canvas">
+            <h2>Canvas Element</h2>
+            <canvas id="myCanvas" width="200" height="200"></canvas>
+        </section>
+
+        <!-- SVG Section -->
+        <section id="svg">
+            <h2>SVG Element</h2>
+            <svg width="100" height="100">
+                <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+            </svg>
+        </section>
+
+        <!-- Interactive Elements -->
+        <section id="interactive">
+            <h2>Interactive Elements</h2>
+            
+            <dialog id="myDialog">
+                <p>This is a dialog box!</p>
+                <button onclick="document.getElementById('myDialog').close()">Close</button>
+            </dialog>
+            
+            <button onclick="document.getElementById('myDialog').showModal()">Open Dialog</button>
+            
+            <template id="template">
+                <div class="template-content">
+                    <h3>Template Content</h3>
+                    <p>This content is hidden until cloned.</p>
+                </div>
+            </template>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 AI Native Journey. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Canvas drawing
+        const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d');
+        ctx.fillStyle = 'blue';
+        ctx.fillRect(50, 50, 100, 100);
+
+        // Template usage
+        const template = document.getElementById('template');
+        const clone = template.content.cloneNode(true);
+        document.body.appendChild(clone);
+    </script>
+</body>
+</html> 
