@@ -3,12 +3,13 @@
 from datetime import datetime
 
 def get_learning_paths():
-    return {
-        "1": "Machine Learning Basics",
-        "2": "Deep Learning",
-        "3": "Natural Language Processing",
-        "4": "Computer Vision"
-    }
+    # Now returns a list of dictionaries for better data organization
+    return [
+        {"id": "1", "name": "Machine Learning Basics"},
+        {"id": "2", "name": "Deep Learning"},
+        {"id": "3", "name": "Natural Language Processing"},
+        {"id": "4", "name": "Computer Vision"}
+    ]
 
 def get_welcome_message(name, learning_path):
     current_time = datetime.now().strftime("%H:%M:%S")
@@ -52,14 +53,14 @@ def main():
     # Show available learning paths
     print("\nAvailable Learning Paths:")
     paths = get_learning_paths()
-    for key, value in paths.items():
-        print(f"{key}. {value}")
+    for path in paths:
+        print(f"{path['id']}. {path['name']}")
     
     # Get user's path choice with validation
     while True:
         choice = input("\nSelect your learning path (1-4): ").strip()
-        if choice in paths:
-            selected_path = paths[choice]
+        selected_path = next((p['name'] for p in paths if p['id'] == choice), None)
+        if selected_path:
             break
         print("Invalid choice. Please select a number between 1 and 4.")
     
