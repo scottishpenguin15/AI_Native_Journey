@@ -30,6 +30,17 @@ def get_welcome_message(name, learning_path):
     box += "╚" + "═" * (box_width - 2) + "╝\n"
     return box
 
+def get_user_words():
+    """
+    Prompts the user to enter a noun, a verb, and an adjective, and returns them as a tuple.
+    Returns:
+        tuple: (noun, verb, adjective)
+    """
+    noun = input("Enter a noun: ").strip()
+    verb = input("Enter a verb: ").strip()
+    adjective = input("Enter an adjective: ").strip()
+    return noun, verb, adjective
+
 def main():
     # Get user's name with validation
     while True:
